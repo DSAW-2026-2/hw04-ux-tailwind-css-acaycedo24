@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConectaNegocio</title>
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F5F2E9',
+            surface: '#FEFDF7',
+            ink: '#1E222F',
+            accent: '#C05A2B',
+            line: '#D8D3C8',
+            'paper-dark': '#12151C',
+            'surface-dark': '#1E222F'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-paper dark:bg-paper-dark text-ink dark:text-paper transition-colors">
+
+  <header class="flex flex-col sm:flex-row sm:items-center gap-3 px-6 py-4 bg-surface dark:bg-surface-dark border-b border-line dark:border-ink">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj48cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjE2IiBmaWxsPSIjMUUyMjJGIi8+PHRleHQgeD0iNjAiIHk9IjcyIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjRkZGRkZGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DTjwvdGV4dD48L3N2Zz4=" alt="Logotipo de ConectaNegocio, iniciales CN en un cuadro oscuro" width="60" height="60">
+    <h1 class="text-xl font-bold">ConectaNegocio</h1>
+    <div class="sm:ml-auto flex items-center gap-4">
+      <nav>
+        <ul class="flex gap-6">
+          <li><a href="index.html" class="font-semibold hover:text-accent">Inicio</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button" class="px-3 py-1.5 rounded border border-line dark:border-ink text-sm font-semibold hover:text-accent" aria-pressed="false">
+        Modo oscuro
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-5 py-8">
+    <section id="problem" aria-labelledby="problem-heading" class="mb-10">
+      <h2 id="problem-heading" class="text-2xl font-bold text-accent mb-4">El problema</h2>
+      <p>
+        Los administradores de pequeños comercios que compran productos a varios
+        proveedores no cuentan con un espacio centralizado para comparar ofertas,
+        conservar la conversación de cada negociación y hacer seguimiento a sus
+        pedidos. Hoy la información queda dispersa entre llamadas, WhatsApp,
+        facturas y notas.
+      </p>
+    </section>
+
+    <section id="solution" aria-labelledby="solution-heading" class="mb-10">
+      <h2 id="solution-heading" class="text-2xl font-bold text-accent mb-4">Nuestra solución</h2>
+      <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article class="bg-surface dark:bg-surface-dark border border-line dark:border-ink rounded-lg p-5">
+          <h3 class="font-bold mb-2">Comparar ofertas</h3>
+          <p>Compara ofertas de distintos proveedores para un mismo producto, con los mismos atributos alineados.</p>
+        </article>
+        <article class="bg-surface dark:bg-surface-dark border border-line dark:border-ink rounded-lg p-5">
+          <h3 class="font-bold mb-2">Chat contextual</h3>
+          <p>Conversa con el proveedor desde la oferta o el pedido específico, sin perder el contexto de la negociación.</p>
+        </article>
+        <article class="bg-surface dark:bg-surface-dark border border-line dark:border-ink rounded-lg p-5">
+          <h3 class="font-bold mb-2">Seguimiento de pedidos</h3>
+          <p>Consulta el estado y el historial de tu pedido, incluyendo entregas parciales, hasta la recepción completa.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="target-users" aria-labelledby="users-heading" class="mb-10">
+      <h2 id="users-heading" class="text-2xl font-bold text-accent mb-4">¿Para quién es?</h2>
+      <p>Comerciantes que administran pequeños negocios, como una papelería de barrio, y proveedores que los abastecen de productos.</p>
+    </section>
+
+    <section id="request-access" aria-labelledby="request-heading">
+      <h2 id="request-heading" class="text-2xl font-bold text-accent mb-4">Solicita acceso</h2>
+      <form class="bg-surface dark:bg-surface-dark border border-line dark:border-ink rounded-lg p-6 max-w-sm">
+        <label for="name" class="block font-semibold mb-1">Nombre</label>
+        <input type="text" id="name" name="name" required class="w-full mb-4 px-3 py-2 border border-line dark:border-ink rounded bg-paper dark:bg-paper-dark text-ink dark:text-paper">
+
+        <label for="email" class="block font-semibold mb-1">Correo electrónico</label>
+        <input type="email" id="email" name="email" required class="w-full mb-4 px-3 py-2 border border-line dark:border-ink rounded bg-paper dark:bg-paper-dark text-ink dark:text-paper">
+
+        <button type="submit" class="bg-accent text-surface font-semibold px-5 py-2 rounded hover:opacity-90">Solicitar acceso</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 border-t border-line dark:border-ink">
+    <p>&copy; 2026 ConectaNegocio. Universidad de La Sabana — DSAW.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    function updateLabel() {
+      const isDark = root.classList.contains('dark');
+      toggle.textContent = isDark ? 'Modo claro' : 'Modo oscuro';
+      toggle.setAttribute('aria-pressed', String(isDark));
+    }
+
+    toggle.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+      updateLabel();
+    });
+
+    updateLabel();
+  </script>
+</body>
+</html>
+
