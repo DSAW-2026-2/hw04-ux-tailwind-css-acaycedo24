@@ -78,3 +78,10 @@ elección.
    mayúsculas de minúsculas, un simple renombrado en VS Code no bastaba
    — Git no registraba el cambio. Lo resolví renombrando en dos pasos
    (`git mv Index.html temp.html`, commit; `git mv temp.html
+   index.html`, commit) para forzar a Git a grabar el nombre correcto.
+
+**Diferencia entre el syllabus general y el rubric.json real:** el
+syllabus general sugería "todas las pantallas" en Figma; el rubric.json
+real solo exige mínimo 3 pantallas distintas con un elemento mostrando
+3 estados (vacío, lleno, error). A la fecha de esta entrega el Figma
+tiene 2 de 3 — quedó documentado en el README en vez de ocultarlo.
