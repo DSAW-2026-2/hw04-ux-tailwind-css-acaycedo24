@@ -5,6 +5,18 @@
 ## LINK DE DESPLIEGUE
 https://dsaw-2026-2.github.io/hw04-ux-tailwind-css-acaycedo24/
 
+## Nombre estudiante:
+Alejandro Caycedo Montero 
+
+## Nombre grupo e integrantes de grupo:
+
+CONECTANEGOCIO - (Nombre grupo)
+
+- Sebastian Franco Umbacia
+- Catalina Vega Romero
+- Jose Alejandro Melo
+- Alejandro Caycedo Montero
+
 ## Objective
 
 Create complete wireframes for your project in Figma and rebuild the landing page with Tailwind CSS, including a working dark mode toggle.
